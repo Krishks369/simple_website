@@ -5,7 +5,7 @@ FROM nginx:latest
 ARG IMAGE_TAG
 
 # Copy the HTML file to the default Nginx web root directory
-COPY simple.html /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
 
 # Expose port 80 for web traffic
 EXPOSE 80
