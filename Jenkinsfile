@@ -13,14 +13,17 @@ pipeline {
         echo 'Build successful'
       }
     }
-    /*
+    
     stage('Provisioning Resources') {
       steps {
         script {
-          // Add your resource provisioning steps here
+             echo 'Provisioning resources'
+             sh ' cd /home/ec2-user/terra-files/'
+             sh ' terraform apply'
+             echo ' terraform successfull'
         }
       }
     }
-    */
+    
   }
 }
