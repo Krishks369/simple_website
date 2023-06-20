@@ -16,12 +16,12 @@ pipeline {
     
     stage('Provisioning Resources') {
       steps {
-        script {
-             echo 'Provisioning resources'
-             sh ' cd /home/ec2-user/terra-files/'
-             sh ' terraform apply'
+              echo 'Provisioning resources'
+              dir('/home/ec2-user/terra-files/') {
+                   sh ' terraform apply'
+              }
              echo ' terraform successfull'
-        }
+        
       }
     }
     
