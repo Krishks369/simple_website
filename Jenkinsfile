@@ -18,7 +18,7 @@ pipeline {
       steps {
               echo 'Provisioning resources'
               dir('/home/ec2-user/terra-files/') {
-                   sh ' sudo terraform apply -auto-approve'
+                   sh ' terraform apply -auto-approve'
               }
              echo ' terraform successfull'
         
