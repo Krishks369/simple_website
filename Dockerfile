@@ -7,7 +7,6 @@ ARG IMAGE_TAG
 # Copy the HTML file to the default Nginx web root directory
 COPY index.html /usr/share/nginx/html/
 
-# Expose port 80 for web traffic
 EXPOSE 80
 
 # Run a custom script to tag the image with the timestamp
